@@ -1,18 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Proptypes from "prop-types";
 import "./Movie.css";
+import { Link } from "react-router-dom";
 
-function Movie({ id, poster, title, sum }) {
+function Movie({ id, poster, title, sum, bg }) {
   return (
     <Link
       to={{
-        pathname: "/movie-detail",
+        pathname: `/detail/${id}`,
         state: {
           id,
           poster,
           title,
-          sum
+          sum,
+          bg
         }
       }}
     >

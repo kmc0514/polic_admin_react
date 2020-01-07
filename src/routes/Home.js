@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 import axios from "axios";
-import Movie from "../components/Movie";
+import Movie from "../component/Movie";
 
 class Home extends React.Component {
   state = {
@@ -29,19 +29,22 @@ class Home extends React.Component {
   render() {
     const { isLoading, movies } = this.state;
     return (
-      <ul className="movie__list">
-        {isLoading
-          ? "NOW LOADING..."
-          : movies.map(movie => (
-              <Movie
-                key={movie.id}
-                id={movie.id}
-                poster={movie.medium_cover_image}
-                title={movie.title}
-                sum={movie.summary}
-              ></Movie>
-            ))}
-      </ul>
+      <main className="movie__main">
+        <ul className="movie__list">
+          {isLoading
+            ? "NOW LOADING..."
+            : movies.map(movie => (
+                <Movie
+                  key={movie.id}
+                  id={movie.id}
+                  poster={movie.medium_cover_image}
+                  title={movie.title}
+                  sum={movie.summary}
+                  bg={movie.background_image_original}
+                ></Movie>
+              ))}
+        </ul>
+      </main>
     );
   }
 }

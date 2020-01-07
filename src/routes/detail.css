@@ -1,0 +1,38 @@
+.detail__contents {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding: 0px 50px;
+  padding-top: 70px;
+}
+
+.contents-poster {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}
+
+.contents-config {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 270px;
+  margin-top: 30px;
+}
+
+.contents-config h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.contents-config h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.contents-config p {
+  font-size: 24px;
+  line-height: 30px;
+}
